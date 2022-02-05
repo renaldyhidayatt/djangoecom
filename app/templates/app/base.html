@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="max-age=604800" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>GreatKart | One of the Biggest Online Shopping Platform</title>
+
+    <link
+      href="{%static 'app/images/favicon.ico'%}"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+
+    <!-- jQuery -->
+    <script
+      src="{%static 'app/js/jquery-2.0.0.min.js'%}"
+      type="text/javascript"
+    ></script>
+
+    <!-- Bootstrap4 files-->
+    <script
+      src="{%static 'app/js/bootstrap.bundle.min.js'%}"
+      type="text/javascript"
+    ></script>
+    <link
+      href="{%static 'app/css/bootstrap.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Font awesome 5 -->
+    <link
+      href="{%static 'app/fonts/fontawesome/css/all.min.css'%}"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- custom style -->
+    <link href="{%static 'app/css/ui.css'%}" rel="stylesheet" type="text/css" />
+    <link
+      href="{%static 'app/css/custom.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'app/css/responsive.css'%}"
+      rel="stylesheet"
+      media="only screen and (max-width: 1200px)"
+    />
+
+    <!-- custom javascript -->
+    <script src="{%static 'app/js/script.js'%}" type="text/javascript"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AcinlVwuKD6j0Ns0mQbowlcgLWzXnnzeX7x3Nnh0isxopISx9-ZX_3MK-JBPhtWlEZcWh2K9tpBBMJNa&currency=USD"></script>
+    <script type="text/javascript">
+      /// some script
+
+      // jquery ready start
+      $(document).ready(function () {
+        // jQuery code
+      });
+      // jquery end
+    </script>
+  </head>
+  <body>
+    <header class="section-header">
+      <nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTop4"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTop4">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link"> English </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link"> USD </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li>
+                <a href="#" class="nav-link">
+                  <i class="fa fa-envelope"></i> Email
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">
+                  <i class="fa fa-phone"></i> Call us
+                </a>
+              </li>
+            </ul>
+            <!-- list-inline //  -->
+          </div>
+          <!-- navbar-collapse .// -->
+        </div>
+        <!-- container //  -->
+      </nav>
+
+      <section class="header-main border-bottom">
+        <div class="container">
+          <div class="row align-items-center"></div>
+          <!-- row.// -->
+        </div>
+        <!-- container.// -->
+      </section>
+      <!-- header-main .// -->
+    </header>
+    <!-- section-header.// -->
+
+    <!-- ========================= SECTION MAIN ========================= -->
+    {% block content %} {% endblock content %} {% include "app/footer.html" %}
+
+    <!-- ========================= FOOTER ========================= -->
+    <script>
+      $(document).ready(function () {
+        $(".thumb a").click(function (e) {
+          e.preventDefault(),
+            $(".mainImage img").attr("src", $(this).attr("href"));
+        });
+      });
+    </script>
+  </body>
+</html>

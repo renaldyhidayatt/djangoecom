@@ -4,8 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+django-heroku = "*"
+django-admin-thumbnails = "*"
+django-crispy-forms = "*"
+pillow = "*"
+requests = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
