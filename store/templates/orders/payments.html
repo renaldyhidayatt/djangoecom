@@ -173,7 +173,7 @@
                     status: details.status,
                   }),
                 })
-                .thenz(response => response.json())
+                .then(response => response.json())
                 .then((data ) => {
                   window.location = redirect_url + '?order_number='+date.order_number+'&payment_id='+data.payment_id
 

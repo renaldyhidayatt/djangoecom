@@ -11,7 +11,9 @@ from django.http import HttpResponse
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.
+
 """verification email"""
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
@@ -106,7 +108,7 @@ def login(request):
                     return redirect(nextPage)
 
             except:
-                return redirect("dashbord")
+                return redirect("dashboard")
 
         else:
             messages.error(request, "Invalid login credentials")
@@ -138,7 +140,7 @@ def activate(request, uidb64, token):
 
 
 @login_required(login_url="login")
-def dashbord(request):
+def dashboard(request):
     orders = Order.objects.order_by("created_at").filter(
         user_id=request.user.id, is_ordered=True
     )
